@@ -22,5 +22,6 @@ jobs:
            python-version: 3.7
            channels: conda-forge,plotly
       - name: Build it
+        working-directory: doc/
         run: |
           make github
