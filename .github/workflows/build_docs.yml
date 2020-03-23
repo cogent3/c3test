@@ -22,8 +22,9 @@ jobs:
            environment-file: doc/rtd-environment.yml
            activate-environment: cogent3
            auto-activate-base: false
-      - shell: bash -l {0}
-          run: |
+      - name: Conda info
+        shell: bash
+        run: |
             conda info
             conda list
       - name: Build it
