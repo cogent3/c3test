@@ -43,7 +43,7 @@ html:
 
 github:
 	@make html
-	@cp -a _build/html/. ./docs
+	@cp -a _build/html/. ../docs
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) _build/dirhtml
