@@ -1,0 +1,23 @@
+name: cogent3
+channels:
+  - conda-forge
+  - plotly
+dependencies:
+  - pandoc
+  - python=3.7
+  - plotly
+  - plotly-orca
+  - pip
+  - pip:
+    - numpydoc
+    - psutil
+    - ipython
+    - ipykernel
+    - ipywidgets
+    - sphinx>=1.6
+    - nbsphinx
+    - nbformat
+    - nbconvert!=5.4
+    - sphinxcontrib-bibtex
+    - sphinx-gallery
+    - ../
