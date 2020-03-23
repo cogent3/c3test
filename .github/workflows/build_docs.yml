@@ -22,6 +22,7 @@ jobs:
            environment-file: doc/rtd-environment.yml
            activate-environment: cogent3
            auto-activate-base: false
+           channels: conda-forge,plotly
       - name: Conda info
         shell: bash
         run: |

@@ -1,6 +1,3 @@
-channels:
-  - conda-forge
-  - plotly
 show_channel_urls: True
 add_pip_as_python_dependency: true
 conda-build:
