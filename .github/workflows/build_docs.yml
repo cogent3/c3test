@@ -8,7 +8,7 @@ on:
 
 jobs:
   example-3:
-    name: Ex3 Linux
+    name: Doc Build
     runs-on: 'macos-latest'
     steps:
       - uses: actions/checkout@v2
@@ -22,3 +22,7 @@ jobs:
           conda activate cogent3
           conda info
           conda list
+      - name: Build it
+        working-directory: doc/
+        run: |
+          make github
