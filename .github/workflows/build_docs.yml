@@ -9,7 +9,7 @@ on:
 jobs:
   example-3:
     name: Ex3 Linux
-    runs-on: 'ubuntu-latest'
+    runs-on: 'macos-latest'
     steps:
       - uses: actions/checkout@v2
       - uses: goanpeca/setup-miniconda@v1
@@ -17,8 +17,6 @@ jobs:
            activate-environment: cogent3
            environment-file: doc/rtd-environment.yml
            python-version: 3.7
-           condarc-file: doc/condarc.yml
-           auto-activate-base: true
       - shell: bash -l {0}
         run: |
           conda activate cogent3
