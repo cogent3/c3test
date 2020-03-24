@@ -19,7 +19,8 @@ jobs:
            python-version: 3.7
            condarc-file: doc/condarc.yml
            auto-activate-base: true
-      - shell: bash
+      - shell: bash -l {0}
         run: |
+          conda activate cogent3
           conda info
           conda list
