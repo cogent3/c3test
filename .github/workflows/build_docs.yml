@@ -23,6 +23,8 @@ jobs:
           conda info
           conda list
       - name: Build it
+        shell: bash -l {0}
         working-directory: doc/
         run: |
+          conda activate cogent3
           make github
