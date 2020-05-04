@@ -26,7 +26,7 @@ jobs:
               echo "parents parent ../.."
               ls ../..
               echo "should be dest"
-              ls ../../cogent3-org
+              ls ../../cogent3-org/docs
               die
 
           - uses: goanpeca/setup-miniconda@v1
@@ -49,7 +49,7 @@ jobs:
               pwd
               conda activate cogent3
               make github
-              mv docs ../../cogent3-org/docs/dev
+              mv ../docs ../../cogent3-org/docs/dev
 
           - shell: bash -l {0}
             run: |
