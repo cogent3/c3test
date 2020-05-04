@@ -26,8 +26,7 @@ jobs:
               echo "parents parent ../.."
               ls ../..
               echo "should be dest"
-              ls ../../cogent3-org/docs
-              die
+              ls -a ../../cogent3-org/docs
 
           - uses: goanpeca/setup-miniconda@v1
             with:
