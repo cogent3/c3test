@@ -1,60 +1,69 @@
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Custom composable apps &#8212; cogent3 2020.2.7a documentation</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <title>Custom composable apps &#8212; cogent3  documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/language_data.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="../_static/require.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Image Gallery" href="../draw/index.html" />
-    <link rel="prev" title="natsel_zhang – a branch-site test" href="evo-natsel_zhang.html" />
-   
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="next" title="The Library" href="../library.html" />
+    <link rel="prev" title="Using a protein model" href="align-protein.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
   </head><body>
-  <div class="document">
-    
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="../index.html">cogent3</a></h1>
 
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          cogent3</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
 
-
-
-
-
-
-
-<h3>Navigation</h3>
-<ul class="current">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../install.html">Install</a></li>
+                <li><a href="https://cogent3.org/docs">Docs</a></li>
+                <li><a href="https://github.com/cogent3/cogent3">Code</a></li>
+                <li><a href="https://cogent3.org/cogent3/draw/index.html">Gallery</a></li>
+                <li><a href="../projects.html">Projects Using</a></li>
+                <li><a href="https://github.com/cogent3/c3dev/wiki/Code-of-Conduct">Code of Conduct</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../warning.html">Warning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">The <code class="docutils literal notranslate"><span class="pre">apps</span></code></a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#the-progressive-align-app">The <code class="docutils literal notranslate"><span class="pre">progressive_align</span></code> App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#the-model-app">The <code class="docutils literal notranslate"><span class="pre">model</span></code> App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#the-hypothesis-app">The <code class="docutils literal notranslate"><span class="pre">hypothesis</span></code> App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#the-natsel-apps">The <code class="docutils literal notranslate"><span class="pre">natsel</span></code> Apps</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#the-user-function-apps">The <code class="docutils literal notranslate"><span class="pre">user_function</span></code> Apps</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../draw/index.html">Image Gallery</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The <code class="docutils literal notranslate"><span class="pre">apps</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="../library.html">The Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../licenses.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html">Posting Bugs</a></li>
@@ -62,36 +71,65 @@
 <li class="toctree-l1"><a class="reference internal" href="../general.html#support">Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general.html#search">Search</a></li>
 </ul>
-
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../index.html">Documentation overview</a><ul>
-  <li><a href="index.html">The <code class="docutils literal notranslate"><span class="pre">apps</span></code></a><ul>
-      <li>Previous: <a href="evo-natsel_zhang.html" title="previous chapter"><code class="docutils literal notranslate"><span class="pre">natsel_zhang</span></code> – a branch-site test</a></li>
-      <li>Next: <a href="../draw/index.html" title="next chapter">Image Gallery</a></li>
-  </ul></li>
-  </ul></li>
 </ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          
-
-          <div class="body" role="main">
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Custom composable apps</a><ul>
+<li><a class="reference internal" href="#a-simple-example">A simple example</a></li>
+<li><a class="reference internal" href="#renaming-sequences">Renaming sequences</a></li>
+<li><a class="reference internal" href="#a-user-function-for-with-a-different-output-type">A user function for with a different output type</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
             
+            
+              
+                
+  <li>
+    <a href="align-protein.html" title="Previous Chapter: Using a protein model"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Using a protein model</span>
+    </a>
+  </li>
+  <li>
+    <a href="../library.html" title="Next Chapter: The Library"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">The Library &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
   <div class="section" id="custom-composable-apps">
 <h1>Custom composable apps<a class="headerlink" href="#custom-composable-apps" title="Permalink to this headline">¶</a></h1>
 <p>You can make a simple customised app using the <code class="docutils literal notranslate"><span class="pre">user_function</span></code> app. This is a wrapper class that takes a reference to your function and the input, output and data types. The resulting app can then become part of a composed function.</p>
@@ -109,28 +147,9 @@
 <div class="section" id="a-simple-example">
 <h2>A simple example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h2>
 <p>We make a very simple function <code class="docutils literal notranslate"><span class="pre">first4</span></code>, that returns the first 4 elements of an alignment.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">first4</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">val</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
-</pre></div>
-</div>
 <p>Now we define a <code class="docutils literal notranslate"><span class="pre">user_function</span></code> instance that takes and returns an <code class="docutils literal notranslate"><span class="pre">ALIGNED_TYPE</span></code>.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cogent3.app.composable</span> <span class="kn">import</span> <span class="n">user_function</span><span class="p">,</span> <span class="n">ALIGNED_TYPE</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">just4</span> <span class="o">=</span> <span class="n">user_function</span><span class="p">(</span><span class="n">first4</span><span class="p">,</span> <span class="n">input_types</span><span class="o">=</span><span class="n">ALIGNED_TYPE</span><span class="p">,</span> <span class="n">output_types</span><span class="o">=</span><span class="n">ALIGNED_TYPE</span><span class="p">,</span> <span class="n">data_types</span><span class="o">=</span><span class="s2">&quot;Alignment&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">repr()</span></code> of your <code class="docutils literal notranslate"><span class="pre">user_function</span></code> instance indicates the wrapped function and the module it’s in.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">just4</span>
-<span class="go">user_function(name=&#39;first4&#39;, module=&#39;__main__&#39;)</span>
-</pre></div>
-</div>
 <p>You use it like all composable apps which we demonstrate using a small sample alignment.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cogent3</span> <span class="kn">import</span> <span class="n">make_aligned_seqs</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">aln</span> <span class="o">=</span> <span class="n">make_aligned_seqs</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s2">&quot;GCAAGCGTTTAT&quot;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s2">&quot;GCTTTTGTCAAT&quot;</span><span class="p">),</span> <span class="n">array_align</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">just4</span><span class="p">(</span><span class="n">aln</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>
-<span class="go">2 x 4 text alignment: a[GCAA], b[GCTT]</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="renaming-sequences">
 <h2>Renaming sequences<a class="headerlink" href="#renaming-sequences" title="Permalink to this headline">¶</a></h2>
@@ -139,63 +158,29 @@
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">SERIALISABLE_TYPE</span></code> indicates the data has the ability to be converted to <code class="docutils literal notranslate"><span class="pre">json</span></code>.</p>
 </div>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cogent3.app.composable</span> <span class="kn">import</span> <span class="n">user_function</span><span class="p">,</span> <span class="n">ALIGNED_TYPE</span><span class="p">,</span> <span class="n">SEQUENCE_TYPE</span><span class="p">,</span> <span class="n">SERIALISABLE_TYPE</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">renamer</span><span class="p">(</span><span class="n">aln</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="sd">&quot;&quot;&quot;upper case names&quot;&quot;&quot;</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">aln</span><span class="o">.</span><span class="n">rename_seqs</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">rename_seqs</span> <span class="o">=</span> <span class="n">user_function</span><span class="p">(</span><span class="n">renamer</span><span class="p">,</span>
-<span class="gp">... </span>                            <span class="n">input_types</span><span class="o">=</span><span class="p">(</span><span class="n">ALIGNED_TYPE</span><span class="p">,</span> <span class="n">SEQUENCE_TYPE</span><span class="p">),</span>
-<span class="gp">... </span>                            <span class="n">output_types</span><span class="o">=</span><span class="n">SERIALISABLE_TYPE</span><span class="p">,</span>
-<span class="gp">... </span>                            <span class="n">data_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;SequenceCollection&quot;</span><span class="p">,</span> <span class="s2">&quot;Alignment&quot;</span><span class="p">,</span> <span class="s2">&quot;ArrayAlignment&quot;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">rename_seqs</span><span class="p">(</span><span class="n">aln</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span><span class="o">.</span><span class="n">names</span>
-<span class="go">[&#39;A&#39;, &#39;B&#39;]</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="a-user-function-for-with-a-different-output-type">
 <h2>A user function for with a different output type<a class="headerlink" href="#a-user-function-for-with-a-different-output-type" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we make an function that returns <code class="docutils literal notranslate"><span class="pre">DistanceMatrix</span></code> of an alignment.</p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cogent3.app.composable</span> <span class="kn">import</span> <span class="n">user_function</span><span class="p">,</span> <span class="n">ALIGNED_TYPE</span><span class="p">,</span> <span class="n">PAIRWISE_DISTANCE_TYPE</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">_get_dist</span><span class="p">(</span><span class="n">aln</span><span class="p">):</span>
-<span class="gp">... </span>    <span class="k">return</span> <span class="n">aln</span><span class="o">.</span><span class="n">distance_matrix</span><span class="p">(</span><span class="n">calc</span><span class="o">=</span><span class="s2">&quot;hamming&quot;</span><span class="p">,</span> <span class="n">show_progress</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">get_dist</span> <span class="o">=</span> <span class="n">user_function</span><span class="p">(</span><span class="n">_get_dist</span><span class="p">,</span> <span class="n">input_types</span><span class="o">=</span><span class="n">ALIGNED_TYPE</span><span class="p">,</span>
-<span class="gp">... </span>                         <span class="n">output_types</span><span class="o">=</span><span class="n">PAIRWISE_DISTANCE_TYPE</span><span class="p">,</span>
-<span class="gp">... </span>                         <span class="n">data_types</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;Alignment&quot;</span><span class="p">,</span> <span class="s2">&quot;ArrayAlignment&quot;</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">get_dist</span><span class="p">(</span><span class="n">aln</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>
-<span class="go">=====================</span>
-<span class="go">          a         b</span>
-<span class="go">---------------------</span>
-<span class="go">a    0.0000    6.0000</span>
-<span class="go">b    6.0000    0.0000</span>
-<span class="go">---------------------</span>
-</pre></div>
-</div>
 </div>
 </div>
 
 
-          </div>
-          
-        </div>
-      </div>
-    <div class="clearer"></div>
-  </div>
-    <div class="footer">
-      &copy;2020, cogent3.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="../_sources/app/user_function.rst.txt"
-          rel="nofollow">Page source</a>
     </div>
-
-    
-
-    
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, cogent3 Team.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>
