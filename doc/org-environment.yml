@@ -1,9 +1,10 @@
-name: cogent3
+name: cogent3org
 channels:
   - conda-forge
   - plotly
 dependencies:
   - python=3.7
+  - matplotlib
   - pandoc
   - plotly
   - plotly-orca

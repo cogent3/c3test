@@ -10,12 +10,12 @@ jobs:
         steps:
           - uses: goanpeca/setup-miniconda@v1
           - uses: actions/checkout@v2
-            with: 
-              repository: cogent3/cogent3
-              path: cogent3-source
-              activate-environment: cogent3-source
-              environment-file: cogent3-source/doc/rtd-environment.yml
-              python-version: 3.8
+            with: git@github.com:cogent3/cogent3.git
+            path: cogent3-source
+            with:
+               activate-environment: cogent3
+               environment-file: cogent3-source/doc/rtd-environment.yml
+               python-version: 3.8
           - shell: bash -l {0}
             run: |
               conda activate cogent3-source
@@ -36,19 +36,19 @@ jobs:
           - uses: actions/checkout@v2
           - uses: goanpeca/setup-miniconda@v1
             with:
-               activate-environment: cogent3
-               environment-file: doc/rtd-environment.yml
+               activate-environment: cogent3-org
+               environment-file: doc/org-environment.yml
                python-version: 3.8
           - shell: bash -l {0}
             run: |
-              conda activate cogent3
+              conda activate cogent3-org
               conda info
               conda list
           - name: Build it
             shell: bash -l {0}
             working-directory: doc/
             run: |
-              conda activate cogent3
+              conda activate cogent3-org
               make github
           - name: Deploy
             uses: peaceiris/actions-gh-pages@v3
