@@ -23,7 +23,9 @@ jobs:
             working-directory: cogent3-source/doc/
             run: |
               pwd
-              
+              echo "parents parent ../.."
+              ls ../..
+              echo "should be dest"
               ls ../../cogent3-org
               die
 
