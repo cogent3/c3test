@@ -4,29 +4,54 @@ on:
     - 'master'
 
 jobs:
-  example-3:
-    name: Doc Build
-    runs-on: 'macos-latest'
-    steps:
-      - uses: actions/checkout@v2
-      - uses: goanpeca/setup-miniconda@v1
-        with:
-           activate-environment: cogent3
-           environment-file: doc/rtd-environment.yml
-           python-version: 3.7
-      - shell: bash -l {0}
-        run: |
-          conda activate cogent3
-          conda info
-          conda list
-      - name: Build it
-        shell: bash -l {0}
-        working-directory: doc/
-        run: |
-          conda activate cogent3
-          make github
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+    source:
+        name: Build docs source
+        runs-on: 'macos-latest'
+        steps:
+          - uses: goanpeca/setup-miniconda@v1
+          - uses: actions/checkout@v2
+            with: git@github.com:cogent3/cogent3.git
+            path: cogent3-source
+            with:
+               activate-environment: cogent3-source
+               environment-file: cogent3-source/doc/rtd-environment.yml
+               python-version: 3.8
+          - shell: bash -l {0}
+            run: |
+              conda activate cogent3-source
+              conda info
+              conda list
+          - name: Build it
+            shell: bash -l {0}
+            working-directory: cogent3-source/doc/
+            run: |
+              conda activate cogent3-source
+              make github
+              mv _build/html ./docs/docs
+
+    org:
+        name: Build org
+        runs-on: 'macos-latest'
+        steps:
+          - uses: actions/checkout@v2
+          - uses: goanpeca/setup-miniconda@v1
+            with:
+               activate-environment: cogent3
+               environment-file: doc/rtd-environment.yml
+               python-version: 3.8
+          - shell: bash -l {0}
+            run: |
+              conda activate cogent3
+              conda info
+              conda list
+          - name: Build it
+            shell: bash -l {0}
+            working-directory: doc/
+            run: |
+              conda activate cogent3
+              make github
+          - name: Deploy
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+              github_token: ${{ secrets.GITHUB_TOKEN }}
+              publish_dir: ./docs
