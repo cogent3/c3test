@@ -18,6 +18,15 @@ jobs:
             with:
                path: cogent3-org
 
+          - name: Debug step
+            shell: bash -l {0}
+            working-directory: cogent3-source/doc/
+            run: |
+              pwd
+              ls ..
+              ls ../..
+              die
+
           - uses: goanpeca/setup-miniconda@v1
             with:
                activate-environment: cogent3
@@ -36,9 +45,6 @@ jobs:
             working-directory: cogent3-source/doc/
             run: |
               pwd
-              ls ..
-              ls ../..
-              die
               conda activate cogent3
               make github
               mv docs ../../cogent3-org/docs/dev
