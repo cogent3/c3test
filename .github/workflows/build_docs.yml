@@ -10,8 +10,9 @@ jobs:
         steps:
           - uses: actions/checkout@v2
             with:
-               repository: cogent3/cogent3@develop
+               repository: cogent3/cogent3
                path: cogent3-source
+               ref: develop
           - uses: goanpeca/setup-miniconda@v1
             with:
                activate-environment: cogent3
