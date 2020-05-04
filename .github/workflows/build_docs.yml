@@ -28,29 +28,22 @@ jobs:
             working-directory: cogent3-source/doc/
             run: |
               conda activate cogent3
+              pwd
+              ls
               make github
               mv _build/html ./docs/docs
 
-    org:
-        name: Build org
-        runs-on: 'macos-latest'
-        steps:
           - uses: actions/checkout@v2
-          - uses: goanpeca/setup-miniconda@v1
-            with:
-               activate-environment: cogent3-org
-               environment-file: doc/org-environment.yml
-               python-version: 3.8
           - shell: bash -l {0}
             run: |
-              conda activate cogent3-org
+              conda activate cogent3
               conda info
               conda list
           - name: Build it
             shell: bash -l {0}
             working-directory: doc/
             run: |
-              conda activate cogent3-org
+              conda activate cogent3
               make github
           - name: Deploy
             uses: peaceiris/actions-gh-pages@v3
