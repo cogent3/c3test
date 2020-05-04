@@ -23,7 +23,8 @@ jobs:
             working-directory: cogent3-source/doc/
             run: |
               pwd
-              ls ./../cogent3-org
+              
+              ls ../../cogent3-org
               die
 
           - uses: goanpeca/setup-miniconda@v1
