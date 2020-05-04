@@ -5,7 +5,7 @@ on:
 
 jobs:
     source:
-        name: Build docs source
+        name: Build cogent3 org website and docs
         runs-on: 'macos-latest'
         steps:
           - uses: actions/checkout@v2
@@ -13,40 +13,46 @@ jobs:
                repository: cogent3/cogent3
                path: cogent3-source
                ref: develop
+
+          - uses: actions/checkout@v2
+            with:
+               path: cogent3-org
+
           - uses: goanpeca/setup-miniconda@v1
             with:
                activate-environment: cogent3
                environment-file: cogent3-source/doc/rtd-environment.yml
                python-version: 3.8
+
           - shell: bash -l {0}
             run: |
               conda info --envs
               conda activate cogent3
               conda info
               conda list
-          - name: Build it
+
+          - name: Build source docs
             shell: bash -l {0}
             working-directory: cogent3-source/doc/
             run: |
               conda activate cogent3
-              pwd
-              ls
               make github
-              mv _build/html ./docs/docs
+              mv docs ./cogent3-org/docs/dev
 
-          - uses: actions/checkout@v2
           - shell: bash -l {0}
             run: |
               conda activate cogent3
               conda info
               conda list
-          - name: Build it
+
+          - name: Build org docs
             shell: bash -l {0}
-            working-directory: doc/
+            working-directory: cogent3-org/doc/
             run: |
               conda activate cogent3
               make github
-          - name: Deploy
+
+          - name: Deploy docs
             uses: peaceiris/actions-gh-pages@v3
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
