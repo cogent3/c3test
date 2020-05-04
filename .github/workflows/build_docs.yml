@@ -37,7 +37,9 @@ jobs:
             run: |
               conda activate cogent3
               make github
-              mv docs ./cogent3-org/docs/dev
+              pwd
+              ls
+              mv docs ../../cogent3-org/docs/dev
 
           - shell: bash -l {0}
             run: |
