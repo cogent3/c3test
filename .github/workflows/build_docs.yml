@@ -55,7 +55,6 @@ jobs:
 
           - name: Deploy docs
             uses: peaceiris/actions-gh-pages@v3
-            working-directory: cogent3-org
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
-              publish_dir: docs
+              publish_dir: cogent3-org/docs
