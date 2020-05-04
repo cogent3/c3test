@@ -8,16 +8,18 @@ jobs:
         name: Build docs source
         runs-on: 'macos-latest'
         steps:
-          - uses: goanpeca/setup-miniconda@v1
           - uses: actions/checkout@v2
             with:
                repository: cogent3/cogent3
                path: cogent3-source
+          - uses: goanpeca/setup-miniconda@v1
+            with:
                activate-environment: cogent3
                environment-file: cogent3-source/doc/rtd-environment.yml
                python-version: 3.8
           - shell: bash -l {0}
             run: |
+              conda info --envs
               conda activate cogent3
               conda info
               conda list
