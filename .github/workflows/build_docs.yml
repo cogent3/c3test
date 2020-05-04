@@ -10,9 +10,8 @@ jobs:
         steps:
           - uses: goanpeca/setup-miniconda@v1
           - uses: actions/checkout@v2
-            with: git@github.com:cogent3/cogent3.git
-            path: cogent3-source
-            with:
+            with: cogent3/cogent3
+               path: cogent3-source
                activate-environment: cogent3-source
                environment-file: cogent3-source/doc/rtd-environment.yml
                python-version: 3.8
