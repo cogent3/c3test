@@ -35,10 +35,12 @@ jobs:
             shell: bash -l {0}
             working-directory: cogent3-source/doc/
             run: |
+              pwd
+              ls ..
+              ls ../..
+              die
               conda activate cogent3
               make github
-              pwd
-              ls
               mv docs ../../cogent3-org/docs/dev
 
           - shell: bash -l {0}
