@@ -18,7 +18,6 @@ jobs:
            path: c3src
            ref: develop
 
-      - name: Move source docs into place
       - shell: bash
         run: |
           echo hello
