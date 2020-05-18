@@ -19,7 +19,7 @@ jobs:
            ref: develop
 
       - name: Move source docs into place
-      - shell: bash -l {0}
+      - shell: bash
         run: |
           mv c3src/doc c3org/doc/doc
 
