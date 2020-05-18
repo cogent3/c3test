@@ -22,6 +22,7 @@ jobs:
         shell: bash -l {0}
         run: |
           mv c3src/doc c3org/doc/doc
+          ls .
 
       - name: Make conda environment
         uses: goanpeca/setup-miniconda@v1
