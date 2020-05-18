@@ -11,40 +11,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
            path: c3org
-       
+
       - uses: actions/checkout@v2
         with:
            repository: cogent3/cogent3
            path: c3src
            ref: develop
-      
-      - shell: bash
+
+      - name: Move source docs into place
+      - shell: bash -l {0}
         run: |
           mv c3src/doc c3org/doc/doc
-      
-      - name: Make conda environment
-      - uses: goanpeca/setup-miniconda@v1
-        with:
-           activate-environment: cogent3
-           environment-file: c3org/doc/gh-environment.yml
-           python-version: 3.8
-      
-      - shell: bash
-        run: |
-          conda activate cogent3
-          conda info
-          conda list
-      
-      - name: Build docs
-        shell: bash
-        working-directory: c3org/doc/
-        run: |
-          conda activate cogent3
-          make github
-      
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: c3org/docs
-          publish_branch: master
+
