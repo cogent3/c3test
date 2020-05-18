@@ -20,5 +20,5 @@ jobs:
 
       - shell: bash
         run: |
-          echo hello
+          mv c3src/doc c3org/doc/doc
 
